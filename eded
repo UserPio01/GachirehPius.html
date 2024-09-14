@@ -1,9 +1,0 @@
-function isEven(num) {
-  /* modulo operator */
-  return num % 2 === 0;
-}
-
-// Test cases
-console.log(isEven(4));  // Expected output: true
-console.log(isEven(7));  // Expected output: false
-console.log(isEven(-2)); // Expected output: true
