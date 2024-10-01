@@ -1,6 +1,5 @@
 body{
   font-family: sans-serif;
-  height: 4500px;
 }
 
 .div-logo{
@@ -15,7 +14,7 @@ body{
   border-radius: 50%;
   position: relative;
   display: inline-block;
-  margin-left: 40px;
+  margin-left: 10px;
 }
 
 .plus-sign{
@@ -32,8 +31,6 @@ body{
   font-weight: bold;
   margin: 0;
   display: inline-block;
-  margin-top: 8px;
-  margin-left: 6px;
 }
 
 .medi{
@@ -113,6 +110,89 @@ body{
     top: 330px;
     left: 217px;
   }
+
+  /* Modal (hidden by default) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+}
+
+/* Close Button */
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Login Button */
+.login-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Modal (hidden by default) */
+.login-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content */
+.login-modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+}
+
+/* Close Button */
+.login-close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.login-close-button:hover,
+.login-close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
   
   .book-now-button{
     padding: 10px 30px;
@@ -187,7 +267,7 @@ body{
   }
 
 .div-outer-box{
-  width: 699px;
+  width: 800px;
   height: 150px;
   background-color: black;
   display: flex;
