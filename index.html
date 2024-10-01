@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weatherforcust</title>
   <link rel="stylesheet" href="index.css">
-  <script src="script.js"></script>
 </head>
 <body>
   <div class="div-logo">
@@ -23,20 +22,63 @@
     </div>
 
     <div class="log-sign">
-      <button class="log-in">Log in</button>
-      <button class="sign-up">Sign Up</button>
+      <button class="log-in" id="loginButton">Log in</button>
+      <button class="sign-up" id="signUpButton">Sign Up</button>
+    </div>
+
+    <div id="signUpForm" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <form>
+          <h2>Sign Up</h2>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  
+  
+    <div id="loginForm" class="login-modal">
+      <div class="login-modal-content">
+        <span class="login-close-button">&times;</span>
+        <form>
+          <h2>Log In</h2>
+          <label for="login-username">Username:</label>
+          <input type="text" id="login-username" name="username" required>
+          
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" name="email" required>
+          
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" name="password" required>
+          
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
   </div>
   
     <div class="div-h1-p-img">
       <div class="first-h1-p">
         <h1 class="first-h1">We Care About Your Life</h1>
-        <p class="first-p">Stay ahead of the elements with up-to-the-minute weather updates designed to keep you prepared. Each forecast is tailored to ensure your safety and peace of mind, every day.</p>
-        <p class="first-p">Committed to delivering reliable services across the globe with efficiency and precision.</p>
+        <p class="first-p">We help look for your life as we keep you informed about the weather every single day.</p>
+        <p class="first-p">We endeavour to provide an efficient service allover the world.</p>
       </div>
      
   
-      <img class="img-1" src="https://img.freepik.com/free-vector/realistic-weather-widget_1284-4092.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid" alt="">
+      <div class="video-container">
+        <video id="myVideo" width="600" controls class="vid-1">
+         <source src="Weather Report.mp4" type="video/mp4">
+        </video>
+        </div>
 
       <input type="text" class="input-field">
       <button class="sign-up-button">Sign Up</button>
@@ -45,20 +87,11 @@
       <div class="book-now-div"><button class="book-now-button">Subscribe Now</button>
     </div>
     <div class="play-button"></div>
-      <div class="div-pay-video"><p class="play-video">Play Video</p></div>
-       <script>
-        // Path to your local video file
-        const videoSrc = "file:///C:/Users/Pius/Downloads/Weather%20Forecasts.mp4";
-
-        // Set video source and play the video
-        const videoElement = document.getElementById('myVideo');
-        videoElement.src = videoSrc;
-
-        function playVideo() {
-            videoElement.play();
-        }
-    </script
     </div>
+    <button id="playButton" style="position: absolute; top: 410px;left: 250px;border: none; background-color: white; cursor: pointer; @media (man-width:990px) {
+      top: 460px;
+      left: 250px;
+    }" >Play video</button>
 
     
 <div class="outer-box">
@@ -122,15 +155,15 @@
    </div>
    <div class="service-b-card">
      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI1n_c0ZLzlt-7v_Ev0NkeURAGxBOFw5QSIQ&s" class="icon-2">
-     <p class="card-paragraph-5">Clean</p>
+     <p class="card-paragraph-5">clean</p>
    </div>
    <div class="service-b-card">
      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnHUYgkTiQaBiPvHvjBIlLqpzcExLIAo6Aaw&s" class="icon-2">
-     <p class="card-paragraph-2">Insured</p>
+     <p class="card-paragraph-2">insured</p>
    </div>
    <div class="service-b-card">
      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzbgVP9DcIwFg8FTBWwCybBZdx7MNp_1Id2g&s" class="icon-2">
-     <p class="card-paragraph-7">Company images</p>
+     <p class="card-paragraph-7">company images</p>
    </div>
   </div>
 
@@ -138,14 +171,14 @@
    <div class="outer-box">
     <div class="look-card">
       <p class="doc-p">CEO</p>
-      <p class="card-p">Pius Kimani: 0799999994
+      <p class="card-p">Alex otieno: 07246873294
         Chris Atieno: 0729553168
       </p>
     </div>
     <div class="look-card-b">
       <p class="doc-p">Consult</p>
-      <p class="card-p">Duncan Wao: 07975379201
-        Dick Kerricko: 0756367817
+      <p class="card-p">Mymuner Wetu: 0785379201
+        Dick Kerricko: 0756372817
       </p>
     </div>
     <div class="look-card-c">
@@ -155,7 +188,7 @@
     </div>
     <div class="look-card-d">
       <p class="doc-z">HELP</p>
-      <p class="card-p">Brian Kimotho: 07000053
+      <p class="card-p">Brian Otieno: 0700001653
         Oscar Merlin: 0712335745</p>
     </div>
    </div>
@@ -313,87 +346,7 @@
       </footer>
 
       <div class="copy-right"> <small>&copy; 2024 Weatherforcust.All rights preserved.</small></div>
-              <script src="index.js">
-  document.addEventListener('DOMContentLoaded', function() {
-
-  // Dynamic greeting message based on time of day
-  function dynamicGreeting() {
-    const greetingElement = document.querySelector('.first-h1');
-    const currentHour = new Date().getHours();
-    let greetingMessage = "We Care About Your Life";
-
-    if (currentHour < 12) {
-      greetingMessage = "Good Morning! Stay ahead of the elements.";
-    } else if (currentHour < 18) {
-      greetingMessage = "Good Afternoon! Stay prepared for your day.";
-    } else {
-      greetingMessage = "Good Evening! Get your forecast for tomorrow.";
-    }
-
-    greetingElement.textContent = greetingMessage;
-  }
-
-  // Sign-up button functionality
-  const signUpButton = document.querySelector('.sign-up-button');
-  signUpButton.addEventListener('click', function() {
-    const inputField = document.querySelector('.input-field');
-    if (inputField.value.trim() !== "") {
-      alert(`Thank you for signing up, ${inputField.value}!`);
-      inputField.value = '';  // Clear input field after sign-up
-    } else {
-      alert("Please enter a valid email.");
-    }
-  });
-
-  // Play video functionality
-  const playVideoButton = document.querySelector('.play-video');
-  playVideoButton.addEventListener('click', function() {
-    const videoSrc = "file:///C:/Users/Pius/Downloads/Weather%20Forecasts.mp4";
-    const videoElement = document.createElement('video');
-    videoElement.src = videoSrc;
-    videoElement.setAttribute('controls', 'controls');
-    document.body.appendChild(videoElement);
-    videoElement.play();
-  });
-
-  // Subscribe button functionality
-  const subscribeButton = document.querySelector('.book-now-button');
-  subscribeButton.addEventListener('click', function() {
-    alert('Thank you for subscribing! We will keep you updated.');
-  });
-
-  // Navigation functionality (smooth scroll to section)
-  const navItems = document.querySelectorAll('.div-nav p');
-  navItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-      const sectionName = item.textContent.trim().toLowerCase();
-      const section = document.querySelector(`.${sectionName}-section`);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
-  // Chatbot support functionality
-  const chatbotButton = document.querySelector('.card-headingd');
-  chatbotButton.addEventListener('click', function() {
-    alert('Chatbot is currently online. How can we assist you?');
-  });
-
-  // Dynamic statistics update (fake increase for demo purposes)
-  function updateStats() {
-    const stats = document.querySelectorAll('.div-inner-box div');
-    stats.forEach(function(stat) {
-      const currentValue = parseInt(stat.textContent);
-      stat.textContent = (currentValue + Math.floor(Math.random() * 10)).toString();
-    });
-  }
-
-  // Call all functions
-  dynamicGreeting();
-  updateStats();
-});
-</script>
+    <script src="index.js"></script>
  </body>
 </html>
 </body>
